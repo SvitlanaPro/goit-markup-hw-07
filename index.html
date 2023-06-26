@@ -17,7 +17,6 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-
   <body>
     <header class="header">
       <div class="container header-nav">
@@ -37,9 +36,14 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-burger">
+          <svg width="32" height="22" class="icon-hamburger js-open-menu">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
         <address class="contacts-menu">
           <ul class="list contacts-list">
-            <li class="contact">
+            <li class="contact tablet-mail">
               <a href="mailto:info@devstudio.com" class="contact-item link"
                 >info@devstudio.com</a
               >
@@ -52,11 +56,114 @@
           </ul>
         </address>
       </div>
+      <div class="mobile-menu-wrapper js-menu-container">
+        <div class="container mobile-menu-container">
+          <div class="nav-button-wrapper">
+            <button
+              type="button"
+              class="close-button mobile-close-button js-close-menu"
+            >
+              <svg width="8" height="8" class="icon-close">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="navigations-mobile">
+              <ul class="navigations-mobile-list list">
+                <li class="nav-list-mobile">
+                  <a href="./index.html" class="menu-item-mobile link active"
+                    >Studio</a
+                  >
+                </li>
+                <li class="nav-list-mobile">
+                  <a href="./portfolio.html" class="menu-item-mobile link"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="nav-list-mobile">
+                  <a href="" class="menu-item-mobile link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mobile-fixed-wrap">
+            <address class="mobile-contact-menu">
+              <ul class="list contacts-list">
+                <li class="contact-mobile">
+                  <a
+                    href="tel:+110001111111"
+                    class="contact-item-mobile-number link"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="contact-mobile">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="contact-item-mobile link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <ul class="social-media-list social-media-list-mobile list">
+              <li class="social-media-item">
+                <a
+                  href=""
+                  class="icon-link"
+                  aria-label="link to Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icon-img" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media-item">
+                <a
+                  href=""
+                  class="icon-link"
+                  aria-label="link to Twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icon-img" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media-item">
+                <a
+                  href=""
+                  class="icon-link"
+                  aria-label="link to Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icon-img" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media-item">
+                <a
+                  href=""
+                  class="icon-link"
+                  aria-label="link to Linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icon-img" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
-
     <main>
-      <!------ Hero ------->
-
+      <!-- Hero -->
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
@@ -66,12 +173,12 @@
         </div>
       </section>
 
-      <!------ Section 1 ------>
-      <section class="advatages-description">
-        <div class="container">
+      <!-- Section 1 -->
+      <section class="advantages-description">
+        <div class="container advantages-container">
           <h2 class="visually-hidden">Our advantages</h2>
-          <ul class="list advatages-list">
-            <li class="item">
+          <ul class="list advantages-list">
+            <li class="advantages-item">
               <div class="advantages-icons-wrapper">
                 <svg class="advantages-icons" width="64" height="64">
                   <use href="./images/icons.svg#icon-antenna"></use>
@@ -83,7 +190,7 @@
                 the perfect and creative solution.
               </p>
             </li>
-            <li class="item">
+            <li class="advantages-item">
               <div class="advantages-icons-wrapper">
                 <svg class="advantages-icons" width="64" height="64">
                   <use href="./images/icons.svg#icon-clock"></use>
@@ -95,7 +202,7 @@
                 within the shortest possible time.
               </p>
             </li>
-            <li class="item">
+            <li class="advantages-item">
               <div class="advantages-icons-wrapper">
                 <svg class="advantages-icons" width="64" height="64">
                   <use href="./images/icons.svg#icon-diagram"></use>
@@ -107,7 +214,7 @@
                 growth opportunities and minimize risk.
               </p>
             </li>
-            <li class="item">
+            <li class="advantages-item">
               <div class="advantages-icons-wrapper">
                 <svg class="advantages-icons" width="64" height="64">
                   <use href="./images/icons.svg#icon-astronaut"></use>
@@ -124,58 +231,128 @@
       </section>
 
       <!-- Section 2 -->
-
       <section class="work-examples">
         <div class="container">
           <h2 class="section-title">What are we doing</h2>
           <ul class="list works-list">
             <li class="item">
-              <img
-                src="./images/img1-section2.jpg"
-                alt="computer"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work-examples/img-1.webp    1x,
+                    ./images/work-examples/img-1@2x.webp 2x
+                  "
+                  media="(min-width: 1158px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/work-examples/img-1.jpg    1x,
+                    ./images/work-examples/img-1@2x.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+
+                <img
+                  src="./images/work-examples/img-1.jpg"
+                  alt="computer"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="item">
-              <img
-                src="./images/img2-section2.jpg"
-                alt="phone screens"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work-examples/img-2.webp    1x,
+                    ./images/work-examples/img-2@2x.webp 2x
+                  "
+                  media="(min-width: 1158px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/work-examples/img-2.jpg    1x,
+                    ./images/work-examples/img-2@2x.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+
+                <img
+                  src="./images/work-examples/img-2.jpg"
+                  alt="computer"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="item">
-              <img
-                src="./images/img3-section2.jpg"
-                alt="phone"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work-examples/img-3.webp    1x,
+                    ./images/work-examples/img-3@2x.webp 2x
+                  "
+                  media="(min-width: 1158px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/work-examples/img-3.jpg    1x,
+                    ./images/work-examples/img-3@2x.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+
+                <img
+                  src="./images/work-examples/img-3.jpg"
+                  alt="computer"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
           </ul>
         </div>
       </section>
 
       <!-- Section 3 -->
-
       <section class="team-members-cards">
-        <div class="container">
+        <div class="container team-members-container">
           <h2 class="section-title">Our Team</h2>
           <ul class="list team-list">
             <li class="team-member-card">
-              <img
-                src="./images/people1-mark.jpg"
-                alt="Mark Guerrero"
-                width="264"
-                height="260"
-                class="person-image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/people-1.webp    1x,
+                    ./images/team/people-1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/people-1.jpg    1x,
+                    ./images/team/people-1@2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="./images/team/people-1.jpg"
+                  alt="Mark Guerrero"
+                  width="264"
+                  height="260"
+                  class="person-image"
+                />
+              </picture>
               <div class="wrapper">
-                <h3 class="item-title">Mark Guerrero</h3>
-                <p class="item-description card-description">
-                  Product Designer
-                </p>
+                <h3 class="card-name-title">Mark Guerrero</h3>
+                <p class="card-description">Product Designer</p>
                 <ul class="icon-list list">
                   <li class="personal-social-media">
                     <a
@@ -233,18 +410,32 @@
               </div>
             </li>
             <li class="team-member-card">
-              <img
-                src="./images/people2-tom.jpg"
-                alt="Tom Ford"
-                width="264"
-                height="260"
-                class="person-image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/people-2.webp    1x,
+                    ./images/team/people-2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/people-2.jpg    1x,
+                    ./images/team/people-2@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/people-2.jpg"
+                  alt="Tom Ford"
+                  width="264"
+                  height="260"
+                  class="person-image"
+                />
+              </picture>
               <div class="wrapper">
-                <h3 class="item-title">Tom Ford</h3>
-                <p class="item-description card-description">
-                  Frontend Developer
-                </p>
+                <h3 class="card-name-title">Tom Ford</h3>
+                <p class="card-description">Frontend Developer</p>
                 <ul class="icon-list list">
                   <li class="personal-social-media">
                     <a
@@ -302,16 +493,32 @@
               </div>
             </li>
             <li class="team-member-card">
-              <img
-                src="./images/people3-camila.jpg"
-                alt="Camila Garcia"
-                width="264"
-                height="260"
-                class="person-image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/people-3.webp    1x,
+                    ./images/team/people-3@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/people-3.jpg    1x,
+                    ./images/team/people-3@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/people-3.jpg"
+                  alt="Camila Garcia"
+                  width="264"
+                  height="260"
+                  class="person-image"
+                />
+              </picture>
               <div class="wrapper">
-                <h3 class="item-title">Camila Garcia</h3>
-                <p class="item-description card-description">Marketing</p>
+                <h3 class="card-name-title">Camila Garcia</h3>
+                <p class="card-description">Marketing</p>
                 <ul class="icon-list list">
                   <li class="personal-social-media">
                     <a
@@ -369,16 +576,32 @@
               </div>
             </li>
             <li class="team-member-card">
-              <img
-                src="./images/people4-daniel.jpg"
-                alt="Daniel Wilson"
-                width="264"
-                height="260"
-                class="person-image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/people-4.webp    1x,
+                    ./images/team/people-4@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/people-4.jpg    1x,
+                    ./images/team/people-4@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/people-4.jpg"
+                  alt="Daniel Wilson"
+                  width="264"
+                  height="260"
+                  class="person-image"
+                />
+              </picture>
               <div class="wrapper">
-                <h3 class="item-title">Daniel Wilson</h3>
-                <p class="item-description card-description">UI Designer</p>
+                <h3 class="card-name-title">Daniel Wilson</h3>
+                <p class="card-description">UI Designer</p>
                 <ul class="icon-list list">
                   <li class="personal-social-media">
                     <a
@@ -441,7 +664,7 @@
 
       <!-- Section 4 -->
       <section class="customers-section">
-        <div class="container">
+        <div class="container customers-container">
           <h2 class="section-title">Customers</h2>
           <ul class="customers-list list">
             <li class="customers-item">
@@ -452,7 +675,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/icons.svg#icon-company-1"></use>
                 </svg>
               </a>
@@ -465,7 +688,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/icons.svg#icon-company-2"></use>
                 </svg>
               </a>
@@ -478,7 +701,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/icons.svg#icon-company-3"></use>
                 </svg>
               </a>
@@ -491,7 +714,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/icons.svg#icon-company-4"></use>
                 </svg>
               </a>
@@ -504,7 +727,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/icons.svg#icon-company-5"></use>
                 </svg>
               </a>
@@ -517,7 +740,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/icons.svg#icon-company-6"></use>
                 </svg>
               </a>
@@ -528,6 +751,7 @@
     </main>
 
     <!-- Footer -->
+
     <footer class="footer">
       <div class="container footer-wrapper">
         <div class="footer-left-side">
@@ -541,8 +765,8 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <div>
-          <p class="social-media-text">Social media</p>
+        <div class="footer-social-media-wrapper">
+          <p class="social-media-form-text">Social media</p>
           <ul class="social-media-list list">
             <li class="social-media-item">
               <a
@@ -626,7 +850,11 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-button" data-modal-close>
+        <button
+          type="button"
+          class="close-button modal-close-button"
+          data-modal-close
+        >
           <svg class="icon-close" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -721,6 +949,7 @@
       </div>
     </div>
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
